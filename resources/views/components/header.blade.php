@@ -12,10 +12,18 @@
 	<meta property="og:description" content="Jobick : Job Admin Bootstrap 5 Template" />
 	<meta property="og:image" content="https://jobick.dexignlab.com/xhtml/social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	
+	<meta name="csrf-token" content="{!! csrf_token() !!}">
+
 	<!-- PAGE TITLE HERE -->
-	<title>Jobick Job Admin</title>
-	
+	<title>{{$title}}</title>
+	<!-- <script src="{{asset('admin/js/admincustomjs.js')}}"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="{{asset('admin/images/favicon.png')}}" />
 	<link href="{{asset('admin/vendor/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet">
@@ -25,7 +33,11 @@
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
 	
 </head>
-
+<style>
+	.error{
+		color:red;
+	}
+</style>
 <body>
 
     <!--*******************
@@ -590,7 +602,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
 							<div class="dashboard_bar">
-                                Dashboard
+                                {{$title}}
                             </div>
 							<div class="nav-item d-flex align-items-center">
 								<div class="input-group search-area">

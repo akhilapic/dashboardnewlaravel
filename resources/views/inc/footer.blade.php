@@ -30,13 +30,23 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <!-- Required vendors -->
-    <script src="{{asset('admin/vendor/global/global.min.js')}}"></script>
-	<script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}"></script>
-	<script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js')}}"></script>
+	
+	
+
+	
+
+<!--validation rules-->
+		<script src="{{asset('admin/js/admincustomjs.js')}}"></script><!--custome script-->
+
+	<!-- Required vendors -->
+
+<!-- 	
+	<script src="{{asset('admin/vendor/global/global.min.js')}}"></script> -->
+	<!-- <script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}"></script> 
+	 <script src="{{asset('admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js')}}"></script> -->
 	
 	<!-- Apex Chart -->
-	<script src="{{asset('admin/vendor/apexchart/apexchart.js')}}"></script>
+	<script src="{{asset('/admin/vendor/apexchart/apexchart.js')}}"></script>
 	
 	<script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}"></script>
 	
