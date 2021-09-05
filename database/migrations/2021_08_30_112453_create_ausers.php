@@ -22,6 +22,8 @@ class CreateAusers extends Migration
             $table->string("phone",12);
             $table->string("address",255);
             $table->string("image",255);
+            $table->tinyInteger('status')->default('0');
+            $table->tinyInteger('is_deleted')->default('0');
             $table->timestamps();
         });
     }

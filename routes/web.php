@@ -17,43 +17,54 @@ Route::get('/', function () {
     return view('admin.login');
 });
 
+Route::fallback(function () {
+
+    return view("404");
+
+});
+
 Route::get('/form', function () {
     //return view('welcome');
 	return view('admin.userform');
 });
 
+
+Route::post('action/login', 'App\Http\Controllers\superadminController@logincheck');
 Route::get('admin/dashboard', 'App\Http\Controllers\dashboardController@dashboard')->name("admin/dashboard");
 
-Route::get('/booking-list', 'App\Http\Controllers\bookingController@bookinglist')->name("booking-list");
+Route::post('/booking-list', 'App\Http\Controllers\bookingController@bookinglist')->name("booking-list");
 
 //check new user email address check  exist or not
 Route::post("action/checkuseremail",'App\Http\Controllers\UserController@checkuseremail');
 
 Route::post("action/checkuserphone",'App\Http\Controllers\UserController@checkuserphone');
 //user 
-Route::get('/admin/newuser', 'App\Http\Controllers\UserController@newuser')->name("admin/newuser");
-Route::get('/admin/User-list', 'App\Http\Controllers\UserController@userlist')->name("admin/User-list");
-
+Route::get('/admin/newuser', 'App\Http\Controllers\UserController@newuser');
+Route::get('/admin/User-list', 'App\Http\Controllers\UserController@userlist');
 Route::post('/action/newuser','App\Http\Controllers\UserController@saveuser');
-
+Route::post('/action/edituser','App\Http\Controllers\UserController@edituser');
+Route::get("action/edit-user/{any}",'App\Http\Controllers\UserController@getUserEditData');
+Route::post('/action/deleteuser','App\Http\Controllers\UserController@deleteuser');
+Route::post('/action/deleteuser','App\Http\Controllers\UserController@deleteuser');
+Route::post("/action/userestatus",'App\Http\Controllers\UserController@userestatus');
 
 //<--adnim musican/artist------>
-Route::get('admin/artist-list','App\Http\Controllers\artistController@adminartistlist')->name("admin/artist-list");
+Route::post('admin/artist-list','App\Http\Controllers\artistController@adminartistlist')->name("admin/artist-list");
 
 
 //Subscription
-Route::get('/admin-subscription','App\Http\Controllers\subscriptionController@subscription')->name("admin-subscription");
-Route::get('/admin-subscribers','App\Http\Controllers\subscriptionController@subscribers')->name("admin-subscribers");
-Route::get('/admin-payments','App\Http\Controllers\subscriptionController@payments')->name("admin-payments");
+Route::get('/admin-subscription','App\Http\Controllers\subscriptionController@subscription');
+Route::get('/admin-subscribers','App\Http\Controllers\subscriptionController@subscribers');
+Route::get('/admin-payments','App\Http\Controllers\subscriptionController@payments');
 
 
 //manage content
-Route::get('/admin-about-us','App\Http\Controllers\managecontentController@aboutus')->name("admin-about-us");
-Route::get('/admin-contenct-us','App\Http\Controllers\managecontentController@contenctus')->name("admin-contenct-us");
-Route::get('/home','App\Http\Controllers\managecontentController@home')->name("home");
+Route::get('/admin-about-us','App\Http\Controllers\managecontentController@aboutus');
+Route::get('/admin-contenct-us','App\Http\Controllers\managecontentController@contenctus');
+Route::get('/home','App\Http\Controllers\managecontentController@home');
 
 
 
-//admin profile logour
-Route::get('/admin-my-profile','App\Http\Controllers\adminController@myprofile')->name("admin-my-profile");
-Route::get('/admin-logout','App\Http\Controllers\adminController@logout')->name("admin-logout");
+//admin profile logout
+Route::get('/admin-my-profile','App\Http\Controllers\adminController@myprofile');
+Route::get('/admin-logout','App\Http\Controllers\adminController@logout');

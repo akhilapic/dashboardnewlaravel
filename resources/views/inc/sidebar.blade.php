@@ -35,25 +35,25 @@
               
 				<ul class="metismenu" id="menu" >
          
-					<li><a class="" href="{{route('admin/dashboard')}}" aria-expanded="false">
+					<li><a class="" href="{{url('admin/dashboard')}}" aria-expanded="false">
 					<i class="flaticon-025-dashboard"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
                     </li>
-					<li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+					<li > <a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-093-waving"></i>
 							<span class="nav-text">Booking</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('booking-list')}}">Booking</a></li>
+                            <li><a href="{{url('booking-list')}}">Booking</a></li>
                         </ul>
                     </li>
-                    <li><a class="" href="{{route('admin/User-list')}}" aria-expanded="false">
+                    <li><a class="" href="{{url('admin/User-list')}}" aria-expanded="false">
 						<i class="flaticon-050-info"></i>
 							<span class="nav-text">User</span>
 						</a>
                     </li>
-                    <li><a class=" " href="{{route('admin/artist-list')}}" aria-expanded="false">
+                    <li><a class=" " href="{{url('admin/artist-list')}}" aria-expanded="false">
 							<i class="flaticon-041-graph"></i>
 							<span class="nav-text">Musician/Artist</span>
 						</a>
@@ -64,9 +64,9 @@
 							<span class="nav-text">Subscription</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('admin-subscription')}}">Subscription</a></li>
-                            <li><a href="{{route('admin-subscribers')}}">Subscribers</a></li>
-                            <li><a href="{{route('admin-payments')}}">Payments</a></li>
+                            <li><a href="{{url('admin-subscription')}}">Subscription</a></li>
+                            <li><a href="{{url('admin-subscribers')}}">Subscribers</a></li>
+                            <li><a href="{{url('admin-payments')}}">Payments</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
