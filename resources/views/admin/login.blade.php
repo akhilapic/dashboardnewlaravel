@@ -18,8 +18,8 @@
 	<title>Login</title>
 	
 	<!-- FAVICONS ICON -->
-	<link rel="shortcut icon" type="image/png" href="{{asset('/admin/images/favicon.png')}}" />
-    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="{{asset('public/admin/images/favicon.png')}}" />
+    <link href="{{asset('public/admin/css/style.css')}}" rel="stylesheet">
 
 </head>
 
@@ -33,12 +33,13 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
 									<div class="text-center mb-3">
-										<a href="index.html"><img src="{{asset('admin/images/logo-full.png')}}" alt=""></a>
+										<a href="index.html"><img src="{{asset('public/admin/images/logo-full.png')}}" alt=""></a>
 									</div>
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <span id="msz"></span>
-                                    <form  id="login" method="post">
+                                    <form  id="login" action ="{{url('action/login')}}" method="post">
                                         <div class="mb-3">
+                                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <label class="mb-1"><strong>Email</strong></label>
                                             <input type="email" name ="email" class="form-control" >
                                         </div>
@@ -69,9 +70,9 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('admin/vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('admin/js/custom.min.js')}}"></script>
-    <script src="{{asset('admin/js/dlabnav-init.js')}}"></script>
-	<script src="{{asset('admin/js/styleSwitcher.js')}}"></script>
+    <script src="{{asset('public/admin/vendor/global/global.min.js')}}"></script>
+    <script src="{{asset('public/admin/js/custom.min.js')}}"></script>
+    <script src="{{asset('public/admin/js/dlabnav-init.js')}}"></script>
+	<script src="{{asset('public/admin/js/styleSwitcher.js')}}"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 				<div class="dropdown header-profile2 ">
 					<a class="nav-link " href="javascript:void(0);"  role="button" data-bs-toggle="dropdown">
 						<div class="header-info2 d-flex align-items-center">
-							<img src="{{asset('admin/images/profile/pic1.jpg')}}" alt=""/>
+							<img src="{{asset('public/admin/images/profile/pic1.jpg')}}" alt=""/>
 							<div class="d-flex align-items-center sidebar-info">
 								<div>
 									<span class="font-w400 d-block">Franklin Jr</span>

@@ -10,7 +10,9 @@ class superadminController extends Controller
     {
         $email = $request->email;
         $password = $request->password;
-        $result = Superadmin::all();
-        dd($result);
+
+        return redirect()->to('admin/dashboard');
+    //        $result = Superadmin::all();
+  //      dd($result);
     }
 }
